@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const Congrats = (props) => {
   if(props.success) {
@@ -15,5 +16,9 @@ const Congrats = (props) => {
     );
   }
 };
+
+Congrats.propTypes = {
+
+}
 
 export default Congrats;
