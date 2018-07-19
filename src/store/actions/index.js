@@ -1,7 +1,9 @@
+import axios from 'axios';
 import { getLetterMatchCount } from '../../helpers/index';
 
 export const CORRECT_GUESS = 'CORRECT_GUESS';
 export const GUESS_WORD = 'GUESS_WORD';
+export const SET_SECRET_WORD = 'SET_SECRET_WORD';
 
 export const guessWord = (guessedWord) => {
   return function(dispatch, getState) {
@@ -18,3 +20,9 @@ export const guessWord = (guessedWord) => {
     }
   };
 };
+
+export const getSecretWord = () => {
+  return dispatch => {
+    axios.get('http://localhost:3030');
+  }
+}
